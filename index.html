@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing page</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#ffffff;
+      color:#111;
+      text-align:center;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      padding:20px 15px;
+    }
+
+    h1{
+      color:#0077ff;
+      font-size:22px;
+      margin-top:35px;
+      text-transform:uppercase;
+    }
+
+    p{
+      font-size:15px;
+      margin:8px 0;
+    }
+
+    .timer{
+      font-size:18px;
+      margin-top:10px;
+      font-weight:bold;
+      color:#ff6600;
+    }
+
+    .profile{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin:18px 0;
+    }
+
+    .profile img{
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid #0077ff;
+      box-shadow:0 0 15px rgba(0,119,255,0.3);
+      transition:.3s;
+    }
+
+    .profile img:hover{
+      transform:scale(1.05);
+    }
+
+    .view-btn{
+      display:inline-block;
+      padding:12px 28px;
+      background:linear-gradient(45deg,#0077ff,#00c6ff);
+      color:#fff;
+      border-radius:30px;
+      font-weight:600;
+      text-decoration:none;
+      margin-top:10px;
+      transition:.3s;
+    }
+
+    .view-btn:hover{
+      transform:scale(1.05);
+      box-shadow:0 4px 12px rgba(0,119,255,0.4);
+    }
+
+    h2{
+      color:#0077ff;
+      margin-top:8px;
+      font-size:18px;
+    }
+
+    .disclaimer{
+      background:#f7f7f7;
+      color:#555;
+      font-size:12px;
+      text-align:center;
+      padding:8px 10px;
+      border-top:1px solid #ddd;
+      margin-top:15px;
+      line-height:1.45;
+      border-radius:8px 8px 0 0;
+    }
+
+    .footer-links{
+      font-size:13px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:4px;
+      padding:5px 0 6px;
+      background:#f7f7f7;
+    }
+
+    .footer-links a{
+      color:#0077ff;
+      text-decoration:none;
+    }
+
+    .footer-links span{
+      color:#0077ff;
+      font-weight:500;
+    }
+
+    .credit-line{
+      font-size:10px;
+      opacity:0.55;
+      text-align:center;
+      padding-bottom:10px;
+      background:#f7f7f7;
+      color:#555;
+    }
+
+    .credit-line a{
+      color:#0077ff;
+      text-decoration:none;
+      font-weight:500;
+    }
+
+    @media(max-width:600px){
+      h1{font-size:18px;margin-top:25px;}
+      p{font-size:14px;}
+      .profile img{width:120px;height:120px;}
+      .view-btn{padding:10px 22px;font-size:14px;}
+      h2{font-size:16px;}
+      .disclaimer{font-size:11px;}
+      .footer-links{font-size:12px;}
+      .credit-line{font-size:9px;}
+    }
+  </style>
+</head>
+
+<body>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4256584144631350');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4256584144631350&ev=PageView&noscript=1"/></noscript>
+
+<main>
+  <h1>RADHIKA TRADING TELUGU</h1>
+  <p>💰 Learn to understand the market and trade smartly 🎯</p>
+
+  <div class="timer">
+    <span id="countdown">5</span> SECONDS
+  </div>
+
+  <div class="profile">
+    <img src="https://niftystudy.site/wp-content/uploads/2025/12/tellgu.jpg" alt="Trading Logo">
+  </div>
+
+  <h2>📢 Telugu Traders Community</h2>
+  <p>📈 Understand market moves and turn them into opportunities</p>
+
+  <a href="https://t.me/+c1mYpM7qMO8yZWVl" class="view-btn">
+    JOIN NOW FOR FREE
+  </a>
+</main>
+
+<section class="disclaimer">
+  <strong>Disclaimer:</strong> This page is only for educational & informational purposes.
+  Trading involves risk. Please trade responsibly and do your own research.
+</section>
+
+<div class="footer-links">
+  <a href="#">Privacy Policy</a>
+  <span>|</span>
+  <a href="#">Contact Us</a>
+</div>
+
+<div class="credit-line">
+  Powered by <a href="https://t.me/+TRlJl628l-FkMWE9" target="_blank">Nexgroww</a>
+</div>
+
+<script>
+let countdown = 5;
+const timerInterval = setInterval(() => {
+  document.getElementById("countdown").innerText = countdown;
+  if (countdown === 0) {
+    clearInterval(timerInterval);
+    return;
+  }
+  countdown--;
+}, 1000);
+</script>
+</body>
+</html>
